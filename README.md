@@ -36,3 +36,65 @@
   </a>
 </p>
 
+## 👥 팀원 소개
+
+<div align="center">
+
+| <img src="jiwon.jpg" width="120"> | <img src="hyeryeong.png" width="120"> | <img src="sooyoung.png" width="120"> |
+|:----------------------------------:|:----------------------------------:|:----------------------------------:|
+| [**황지원**](https://github.com/hwngjwn) | [**김혜령**](https://github.com/h-ye-ryoung) | [**최수영**](https://github.com/soo0choi) |
+| 기획 · 디자인 · 프론트 |  백엔드 · 인프라 · 디자인 | 기획 · AI |
+| ![Flutter](https://img.shields.io/badge/Flutter-3.24-blue) ![MLKit](https://img.shields.io/badge/MLKit-Face_Landmarks-yellow) | ![SpringBoot](https://img.shields.io/badge/SpringBoot-3.2-green) ![LiveKit](https://img.shields.io/badge/LiveKit-WebRTC-orange) | ![AI](https://img.shields.io/badge/AI-Suicide_Detection-red) |
+</div>
+
+## 기술 스택
+```mermaid
+flowchart TB
+
+    classDef client fill:#A3D8FF,stroke:#1D75B3,stroke-width:1px,color:#000
+    classDef server fill:#FFE1A8,stroke:#D9983D,stroke-width:1px,color:#000
+    classDef media fill:#FFD1DC,stroke:#C96A7B,stroke-width:1px,color:#000
+    classDef ai fill:#D3F8E2,stroke:#63B58F,stroke-width:1px,color:#000
+    classDef db fill:#E6D4FF,stroke:#8B6AD8,stroke-width:1px,color:#000
+
+    A["Flutter Client
+• LiveKit/WebRTC
+• ML Kit Face Landmarks
+• AR Overlay
+• ONNX Runtime"]:::client
+
+    B["LiveKit / OpenVidu Server
+• SFU Audio
+• Voice Modulation
+• DataChannel Sync"]:::media
+
+    C["Spring Boot Backend
+• Auth
+• SSE Sync
+• GPT Orchestration
+• Risk Routing"]:::server
+
+    D["AI Pipeline
+• Whisper STT
+• GPT Prompting
+• KoAlpaca Fine-tuned Model
+• Suicide/Depression Classifier"]:::ai
+
+    E["RDS(MySQL)
+• User States
+• Session Logs
+• Risk Events"]:::db
+
+    A -->|"WebRTC(Audio/Metadata)"| B
+    A -->|"HTTPS / SSE"| C
+    B -->|"STT Input"| D
+    C -->|"AI 요청"| D
+    D -->|"결과 저장"| E
+    C -->|"Session State Sync"| A
+
+
+
+
+
+
+
