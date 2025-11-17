@@ -1,4 +1,4 @@
-# blurr : 흐려서 다시 그리는 마음의 공간 
+# blurr : 함께 흐리고 다시 그리는 마음의 공간 
 <p align="center">
   <img src="thumbnail.png" width="70%">
 </p>
